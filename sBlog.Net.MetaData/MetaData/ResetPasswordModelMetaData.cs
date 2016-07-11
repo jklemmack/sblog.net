@@ -36,12 +36,12 @@ namespace sBlog.Net.MetaData.MetaData
 
         [DisplayName("Enter your new password")]
         [Required(ErrorMessage = "Your new password is required")]
-        [RegularExpression(@"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})", ErrorMessage = "Password entered is invalid")]
+        //[RegularExpression(@"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})", ErrorMessage = "Password entered is invalid")]
         public object Password { get; set; }
 
         [DisplayName("Enter your new password again")]
         [Required(ErrorMessage = "Confirm password is required")]
-        [RegularExpression(@"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})", ErrorMessage = "Confirm password entered is invalid")]
+        //[RegularExpression(@"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})", ErrorMessage = "Confirm password entered is invalid")]
         public object ConfirmNewPassword { get; set; }
     }
 }

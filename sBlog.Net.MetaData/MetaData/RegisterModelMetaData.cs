@@ -51,7 +51,7 @@ namespace sBlog.Net.MetaData.MetaData
         [ValidatePasswordLength(6, 20)]
         [DataType(DataType.Password)]
         [DisplayName("Confirm new password")]
-        [RegularExpression(@"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})", ErrorMessage = "Confirm password entered is invalid")]
+        //[RegularExpression(@"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})", ErrorMessage = "Confirm password entered is invalid")]
         public object ConfirmPassword { get; set; }
 
         [Required]
