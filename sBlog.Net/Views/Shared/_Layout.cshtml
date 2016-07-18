@@ -7,37 +7,50 @@
     @Html.LoadStylesAndScripts(Html.Action("GetBlogTheme", "Blog").ToString())
 </head>
 <body>
-@Html.Partial("AdminLinks")
-<div id="wrapper">
-	<div id="header-wrapper">
-		<div id="header">
-			<div id="logo">
-				@Html.Action("Logo", "Blog")
-			</div>
-			<div id="menu">
-				@Html.Action("Pages", "ViewPage")
-                <img id="more-pages" src="@Url.Content("~/Content/Images/arrow.png")" alt="more pages" />
-			</div>
-		</div>
-	</div>
-	<!-- end #header -->
-	<div id="page">
-		<div id="content">
-			@RenderBody()
-		</div>
-		<!-- end #content -->
-		<div id="sidebar">
-			@Html.Partial("SideBar")
-		</div>
-		<!-- end #sidebar -->
-		<div style="clear: both;">&nbsp;</div>
-	</div>
-	<!-- end #page -->
-</div>
-<div id="footer">
-	@Html.Action("BlogFooter", "Blog")
-    @Html.Partial("SocialFeatures")
-</div>
-<!-- end #footer -->
+    @Html.Partial("AdminLinks")
+    <div id="wrapper">
+        <div id="header-wrapper">
+            <div id="header">
+                <div id="logo">
+                    @Html.Action("Logo", "Blog")
+                </div>
+                <div id="menu">
+                    @Html.Action("Pages", "ViewPage")
+                    <img id="more-pages" src="@Url.Content("~/Content/Images/arrow.png")" alt="more pages" />
+                </div>
+            </div>
+        </div>
+        <!-- end #header -->
+        <div id="page">
+            <div id="content">
+                @RenderBody()
+            </div>
+            <!-- end #content -->
+            <div id="sidebar">
+                @Html.Partial("SideBar")
+            </div>
+            <!-- end #sidebar -->
+            <div style="clear: both;">&nbsp;</div>
+        </div>
+        <!-- end #page -->
+    </div>
+    <div id="footer">
+        @Html.Action("BlogFooter", "Blog")
+        @Html.Partial("SocialFeatures")
+    </div>
+    <!-- end #footer -->
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-36665403-9', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 </html>
