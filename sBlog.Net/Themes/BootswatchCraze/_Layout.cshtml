@@ -13,43 +13,55 @@
     </script>
     @Html.LoadStylesAndScripts(Html.Action("GetBlogTheme", "Blog").ToString())
 </head>
-    <body>
-        @Html.Partial("AdminLinks")
-        
-        <div class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
+<body>
+    @Html.Partial("AdminLinks")
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
             <div class="navbar-header">
-              @Html.Action("Logo","Blog")
-              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+                @Html.Action("Logo", "Blog")
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
             <div class="navbar-collapse collapse" id="navbar-main">
                 @Html.Action("Pages", "ViewPage")
-            </div>              
-          </div>
+            </div>
         </div>
-	    <br/><br/><br/><br/>
-	    <div class="container">		
-		    <div class="row">
-		      <div class="col-lg-9">
-			    @RenderBody()
-		      </div>
-		        <div class="col-lg-3">
-		            @Html.Action("RecentPosts", "Recents")
-                    @Html.Action("RecentComments", "Comment")
-		            @Html.Action("BlogArchives", "Recents")
-		            @Html.Action("BlogCategories", "Category")
-		            @Html.Partial("SiteActions")
-		        </div>
-		    </div>
-	    </div>
-        <br/>
-        <div id="footer">
-            @Html.Action("BlogFooter","Blog")
-            @Html.Partial("SocialFeatures")
-        </div>              
-    </body>
+    </div>
+    <br /><br /><br /><br />
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                @RenderBody()
+            </div>
+            <div class="col-lg-3">
+                @Html.Action("RecentPosts", "Recents")
+                @Html.Action("RecentComments", "Comment")
+                @Html.Action("BlogArchives", "Recents")
+                @Html.Action("BlogCategories", "Category")
+                @Html.Partial("SiteActions")
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="footer">
+        @Html.Action("BlogFooter", "Blog")
+        @Html.Partial("SocialFeatures")
+    </div>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-36665403-9', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
 </html>
